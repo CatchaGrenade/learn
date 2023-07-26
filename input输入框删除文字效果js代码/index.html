@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>input输入框删除文字效果js代码</title>
+<style>
+*:focus {outline: none; }
+body{margin-top: 20%;margin-left:40% ;}
+#baidu{height: 33px;}
+#baidu .input{border: 1px solid #999999;height: 100%;}
+#baidu .input .clear{width: 30px;height: 35px;line-height: 30px;text-align: center;cursor: pointer;padding-right: 10px;visibility: hidden;opacity: 0.8;color: gray;}
+#baidu input[type=text]{height:86%;border:0px;width: 250px;}
+#baidu div{float: left;}
+#baidu>button{width: 100px;height: 35px;background: #3385ff;color: #fff;border: none;}
+</style>
+
+</head>
+<body><script src="/demos/googlegg.js"></script>
+
+<div id="baidu">
+    <div class="input">
+        <input type="text" id="search"><span class="clear" id="cls">X</span>
+    </div>
+    <button>搜索</button>
+</div>
+
+<script type="text/javascript">
+document.getElementById("search").addEventListener("keyup",function(){
+	if(this.value.length>0)
+	{
+		document.getElementById("cls").style.visibility="visible";
+		document.getElementById("cls").onclick=function()
+		{
+			document.getElementById("search").value="";
+		}
+	}else
+	{
+		document.getElementById("cls").style.visibility="hidden";
+	}
+});
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+<p>来源：<a href="http://www.lanrenzhijia.com/" target="_blank">懒人素材</a></p>
+</div>
+</body>
+</html>
