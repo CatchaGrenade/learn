@@ -40,7 +40,7 @@ public class Person implements Serializable {
                 '}';
     }
 
-    @JSONField(serialize = false)
+//    @JSONField(serialize = false)//添加此标记，在json序列化此类无参构造方法时就不会报错了
     public Boolean isCsq(){
         return this.name.equals("陈世青");
     }
