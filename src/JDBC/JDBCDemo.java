@@ -7,7 +7,8 @@ import java.sql.Statement;
 
 public class JDBCDemo {
     public static void main(String[] args) throws Exception {
-        Class.forName("com.mysql.jdbc.Driver");
+//        Class.forName("com.mysql.jdbc.Driver");
+//        Class.forName("com.mysql.cj.jdbc.Driver");
 
         Connection con =  DriverManager.getConnection("jdbc:mysql://localhost:3306/gamedb", "root", "Csq19961012");
 
