@@ -1,0 +1,32 @@
+# IntelliJ IDEA
+.idea/
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Compiled Java and Kotlin binaries
+*.jar
+*.war
+*.ear
+
+# Gradle-specific output directory
+/build/
+
+# Gradle wrapper files
+/gradle/wrapper/
+
+# Local configuration file (e.g., workspace.xml) and tasks.xml for Kotlin
+/.idea/workspace.xml
+/.idea/tasks.xml
+
+# Caches and build-related files
+/.idea/caches/
+/.idea/libraries/
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/misc.xml
+/.idea/modules/
+/out
