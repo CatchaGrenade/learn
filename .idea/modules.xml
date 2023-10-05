@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/spring-csq/01-aop/01-aop.iml" filepath="$PROJECT_DIR$/spring-csq/01-aop/01-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-csq/02-mybatis/02-mybatis.iml" filepath="$PROJECT_DIR$/spring-csq/02-mybatis/02-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-csq/spring-csq.iml" filepath="$PROJECT_DIR$/spring-csq/spring-csq.iml" />
     </modules>
   </component>
