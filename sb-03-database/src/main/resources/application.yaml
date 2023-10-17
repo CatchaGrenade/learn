@@ -4,3 +4,27 @@ spring:
     url: jdbc:mysql://localhost:3306/defaultdb?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT&allowPublicKeyRetrieval=true
     username: root
     password: Csq19961012
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    #druid数据源专有配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+
+    #stat:监控统计，wall防sql注入， log4j日志记录
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    connectProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+mybatis:
+  type-aliases-package: com.kaung.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+

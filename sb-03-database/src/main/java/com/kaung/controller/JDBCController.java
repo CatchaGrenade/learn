@@ -1,5 +1,7 @@
 package com.kaung.controller;
 
+import com.kaung.mapper.UserMapper;
+import com.kaung.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +17,9 @@ public class JDBCController {
 
     @Resource
     JdbcTemplate jdbcTemplate;
+
+    @Resource
+    UserMapper userMapper;
 
     @GetMapping("/userLs")
     public List<Map<String, Object>> dbInfo(){
@@ -33,6 +38,16 @@ public class JDBCController {
     public void addUser_normal(){
         String sql = "insert user(id, name, pwd) values(?, ?, ?)";
         jdbcTemplate.update(sql, new Object[]{4, "wse", "23w1"});
+    }
+
+    @GetMapping("/mbUserLs")
+    public List<User> mbUserLs(){
+        return userMapper.queryLs();
+    }
+
+    @GetMapping("/mbDelUser")
+    public void mbDelUser(){
+        userMapper.delUser(1);
     }
 
 }
